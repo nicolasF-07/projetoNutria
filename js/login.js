@@ -27,7 +27,7 @@ loginForm.addEventListener('submit', (e) => {
     .then((userCredential) => {
       const user = userCredential.user;
       alert(`Bem-vindo, ${user.displayName || user.email}!`);
-      window.location.href = "index.html"; // redirecione para sua dashboard
+      window.location.href = "./index.html"; // redirecione para sua dashboard
     })
     .catch((error) => {
       alert(`Erro ao entrar: ${error.message}`);
