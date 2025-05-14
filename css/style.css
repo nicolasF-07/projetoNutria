@@ -1,0 +1,99 @@
+:root {
+  --ciano: #00cfd3;
+  --texto: #1a1a1a;
+  --fundo: #ffffff;
+  --fundo-card: #f7f7f7;
+  --borda: #e0e0e0;
+}
+
+/* MODO ESCURO */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --texto: #f1f1f1;
+    --fundo: #121212;
+    --fundo-card: #1e1e1e;
+    --borda: #333;
+  }
+}
+
+/* RESET E ESTILO BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--fundo);
+  color: var(--texto);
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+.btn-logout{
+  background-color: var(--ciano);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: none;
+  border-radius: 30%;
+  max-width: 100px;
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: var(--fundo-card);
+  border: 1px solid var(--borda);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* TÍTULOS */
+h1, h2 {
+  color: var(--texto);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* FORMULÁRIO */
+form {
+  display: grid;
+  gap: 1rem;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 2px solid var(--borda);
+  font-size: 1rem;
+  background-color: var(--fundo);
+  color: var(--texto);
+}
+
+button {
+  background-color: var(--ciano);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: none;
+}
+
+button:hover {
+  background-color: #079d9f;
+}
+
+/* RESULTADO */
+#resultado {
+  margin-top: 1.5rem;
+  background-color: var(--fundo);
+  border: 1px solid var(--borda);
+  padding: 1rem;
+  border-radius: 10px;
+}

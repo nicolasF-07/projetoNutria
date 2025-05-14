@@ -1,0 +1,147 @@
+<option value="">Atividade Física</option>
+
+<option value="">Sexo</option>
+
+
+
+
+javascript
+
+<form id="registerForm" class="login-form hidden">
+        <input type="text" placeholder="Nome completo" required />
+        <input type="email" placeholder="E-mail" required />
+        <input type="password" placeholder="Senha" required />
+        <button type="submit">Criar conta</button>
+        <p class="small-text">Já tem uma conta? <a href="#" id="toLogin">Entrar</a></p>
+      </form>
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nutria - Login</title>
+    <link rel="stylesheet" href="/css/login.css" />
+</head>
+
+<body>
+    <div class="gradient-left"></div>
+    <div class="gradient-right"></div>
+
+    <main class="container">
+        <header>
+            <h2><span class="highlight">Nutria</span></h2>
+            <p class="sub">Controle alimentar inteligente</p>
+        </header>
+
+        <div class="form-box">
+            <!-- Formulário de Login -->
+            <form id="loginForm" class="login-form">
+                <input type="email" placeholder="E-mail" required />
+                <input type="password" placeholder="Senha" required />
+                <button type="submit">Entrar</button>
+                <p class="small-text">Ainda não tem uma conta? <a href="/html/registro.html" id="toRegister">Cadastre-se Já</a></p>
+            </form>
+        </div>
+    </main>
+
+    <script src="/js/login.js"> </script>
+</body>
+
+</html> 
+
+const loginForm = document.getElementById('loginForm');
+    const registerForm = document.getElementById('registerForm');
+    const toRegister = document.getElementById('toRegister');
+    const toLogin = document.getElementById('toLogin');
+
+    toRegister.addEventListener('click', (e) => {
+      e.preventDefault();
+      loginForm.classList.add('hidden');
+      registerForm.classList.remove('hidden');
+    });
+
+    toLogin.addEventListener('click', (e) => {
+      e.preventDefault();
+      registerForm.classList.add('hidden');
+      loginForm.classList.remove('hidden');
+    });
+
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Login realizado!');
+    });
+
+    registerForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Cadastro realizado!');
+    }); 
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nutria - Login</title>
+    <link rel="stylesheet" href="/css/login.css" />
+</head>
+
+<body>
+    <div class="gradient-left"></div>
+    <div class="gradient-right"></div>
+
+    <main class="container">
+        <header>
+            <h2><span class="highlight">Nutria</span></h2>
+            <p class="sub">Controle alimentar inteligente</p>
+        </header>
+
+        <div class="form-box">
+            <!-- Formulário de Registro -->
+            <form id="registerForm" class="login-form hidden">
+                <input type="text" placeholder="Nome completo" required />
+                <input type="email" placeholder="E-mail" required />
+                <input type="password" placeholder="Senha" required />
+                <button type="submit">Criar conta</button>
+                <p class="small-text">Já tem uma conta? <a  href="/html/login.html" id="toLogin">Entrar</a></p>
+            </form>
+        </div>
+    </main>
+
+    <script src="/js/registro.js"> </script>
+</body>
+
+</html> 
+
+const loginForm = document.getElementById('loginForm');
+const registerForm = document.getElementById('registerForm');
+const toRegister = document.getElementById('toRegister');
+const toLogin = document.getElementById('toLogin');
+
+toRegister.addEventListener('click', (e) => {
+    e.preventDefault();
+    loginForm.classList.add('hidden');
+    registerForm.classList.remove('hidden');
+});
+
+toLogin.addEventListener('click', (e) => {
+    e.preventDefault();
+    registerForm.classList.add('hidden');
+    loginForm.classList.remove('hidden');
+});
+
+loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Login realizado!');
+});
+
+registerForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Cadastro realizado!');
+}); 

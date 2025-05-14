@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculadora Nutricional</title>
+    <link href="/css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-light">
+    <div class="btn-logout">
+        <button class="logout">Sair</button> 
+    </div>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h2 class="card-title text-center mb-4">Calculadora Nutricional</h2>
+                        <form id="calcForm" class="row g-3">
+                            <div class="col-md-6">
+                                <label for="idade">Idade</label>
+                                <input type="number" class="form-control" id="idade" placeholder="Idade (anos)"
+                                    required />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="peso">Peso</label>
+                                <input type="number" class="form-control" id="peso" placeholder="Peso (kg)" required />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="altura">Altura</label>
+                                <input type="number" class="form-control" id="altura" placeholder="Altura (cm)"
+                                    required />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="sexo">Sexo</label>
+                                <select class="form-select" id="sexo" required>
+                                    <option value="">Sexo</option>
+                                    <option value="masculino">Masculino</option>
+                                    <option value="feminino">Feminino</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="atividade">Nível de Atividade</label>
+                                <select class="form-select" id="atividade" required>
+                                    <option value="">Atividade Física</option>
+                                    <option value="1.2">Sedentário (Não pratica)</option>
+                                    <option value="1.375">Leve (1-2 vezes na semana)</option>
+                                    <option value="1.55">Moderado (2-3 vezes na semana)</option>
+                                    <option value="1.725">Intenso (4-5 vezes na semana)</option> 
+                                    <option value="1.9">Muito Intenso (5-7 vezes na semana)</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-success w-100">Calcular</button>
+                            </div>
+                        </form>
+                        <div id="resultado" class="mt-4"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/index.js"></script> 
+</body>
+
+</html>

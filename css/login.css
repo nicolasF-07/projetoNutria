@@ -1,0 +1,172 @@
+:root {
+    --ciano: #00cfd3;
+    --texto: #1a1a1a;
+    --fundo: #ffffff;
+    --fundo-card: #f7f7f7;
+    --borda: #e0e0e0;
+    --gradient: #4ce1e1f9;
+  }
+  
+  /* MODO ESCURO */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --texto: #f1f1f1;
+      --fundo: #121212;
+      --fundo-card: #1e1e1e;
+      --borda: #333;
+      --gradient: #1d6969a5;
+    }
+  }
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+/* Gradientes laterais */
+
+.gradient-right {
+    position: fixed;
+    top: 0;
+    width: 15vw;
+    height: 100vh;
+    z-index: -1;
+    background: linear-gradient(to left, var(--gradient), transparent);
+}
+
+.gradient-left {
+    position: fixed;
+    top: 0;
+    width: 15vw;
+    height: 100vh;
+    z-index: -1;
+    background: linear-gradient(to right, var(--gradient), transparent);
+}
+
+.gradient-left {
+    left: 0;
+}
+
+.gradient-right {
+    right: 0;
+}
+
+/* Container principal centralizado */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Títulos */
+h1 {
+    font-size: 2.5rem;
+    color: var(--texto);
+}
+
+.highlight {
+    color: var(--ciano);
+}
+
+.sub {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    color: var(--texto);
+}
+
+.login {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.start-button {
+    padding: 1rem 2rem;
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(4, 215, 226, 0.655);
+}
+
+.start-button:hover {
+    background-color: #2ab9bb;
+}
+
+.login-form {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-form input {
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid var(--borda);
+    background: var(--fundo);
+    color: var(--texto);
+    transition: 0.2s;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: var(--ciano);
+    box-shadow: 0 0 0 3px rgba(0, 207, 211, 0.2);
+}
+
+.login-form button {
+    background-color: var(--ciano);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form button:hover {
+    background-color: #00b5b9;
+}
+
+.small-text {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.small-text a {
+    color: var(--ciano);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.small-text a:hover {
+    text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .gradient-left,
+    .gradient-right {
+        width: 20vw;
+    }
+}
