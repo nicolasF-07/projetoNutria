@@ -29,7 +29,7 @@ registerForm.addEventListener('submit', (e) => {
     })
     .then(() => {
       alert("Conta criada com sucesso!");
-      window.location.href = "login.html";
+      window.location.href = "./login.html";
     })
     .catch((error) => {
       alert(`Erro: ${error.message}`);
