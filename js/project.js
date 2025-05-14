@@ -1,6 +1,6 @@
 document.querySelector('.logout').addEventListener('click', function () {
   // Redireciona para a página de logout
-  window.location.href = 'login.html'; // Altere para o caminho da sua página de logout
+  window.location.href = './login.html'; // Altere para o caminho da sua página de logout
 })
 
 document.getElementById('calcForm').addEventListener('submit', function (e) {
